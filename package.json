@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "first react app",
   "scripts": {
+    "start": "parcel hello.html",
+    "build": "parcel build hello.html",
     "test": "jest"
   },
   "repository": {
