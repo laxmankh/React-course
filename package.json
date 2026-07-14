@@ -1,0 +1,28 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "first react app",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laxmankh/React-course.git"
+  },
+  "keywords": [
+    "laxman"
+  ],
+  "author": "laxman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laxmankh/React-course/issues"
+  },
+  "homepage": "https://github.com/laxmankh/React-course#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}
