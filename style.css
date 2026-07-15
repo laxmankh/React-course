@@ -1,14 +1,116 @@
 #heading {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    font-family: Arial, sans-serif;
-    text-align: center;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 #subheading {
-    color: #7f8c8d;
-    font-size: 1.2rem;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    font-weight: normal;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-weight: normal;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo,
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  justify-content: space-between;
+  padding: 10px 40px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 15px 40px;
+  justify-content: flex-end;
+}
+
+.header-nav ul li {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.header-nav ul li:hover {
+  color: #e23744;
+}
+
+.card {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-data {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-title {
+  margin: 10px 12px 4px;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.card-cuisine {
+  margin: 0 12px 6px;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.card-rating {
+  margin: 0 12px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 20px 0;
 }

@@ -1,22 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import HeaderComponent from "./src/components/HeaderComponent";
+import BodyComponent from "./src/components/BodyComponent";
 
 //in background, react is converting this JSX into React.createElement() function call using babel compiler
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const Jsxheading = () => {
-  return (
-    <>
-      <h1> Namaste React! using JSX</h1>
-    </>
-  );
-};
 
-const FunctionalComponent = () => {
+const AppLayout = () => {
   return (
     <>
-      <Jsxheading />
-      <h1> Namaste React! using functional component</h1>
+      <HeaderComponent />
+      <BodyComponent />
     </>
   );
 };
-root.render(<FunctionalComponent />);
+root.render(<AppLayout />);
