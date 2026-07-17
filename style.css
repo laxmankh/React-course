@@ -60,6 +60,11 @@
   color: #e23744;
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card {
   width: 250px;
   border-radius: 12px;
@@ -177,6 +182,29 @@
   flex-wrap: wrap;
   gap: 24px;
   padding: 20px 0;
+}
+
+.restaurant-menu {
+  font-family: Arial, sans-serif;
+  padding: 20px 40px;
+}
+
+.restaurant-menu-img {
+  width: 100%;
+  max-width: 600px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.restaurant-menu h1 {
+  margin: 16px 0 4px;
+  color: #2c3e50;
+}
+
+.restaurant-menu p {
+  margin: 4px 0;
+  color: #7f8c8d;
 }
 
 .shimmer {

@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { CARD_IMG, CDN_URL } from "../utils/constants";
 
 const CardComponent = (props) => {
   const { resData } = props;
   const {
+    id,
     cloudinaryImageId,
     name,
     avgRating,
@@ -11,7 +13,7 @@ const CardComponent = (props) => {
     sla,
   } = resData;
   return (
-    <>
+    <Link to={`/restaurants/${id}`} className="card-link">
       <div className="card">
         <img
           className="card-data"
@@ -24,7 +26,7 @@ const CardComponent = (props) => {
         <p className="card-cost">{costForTwo}</p>
         <p className="card-delivery">Delivery Time: {sla?.deliveryTime} mins</p>
       </div>
-    </>
+    </Link>
   );
 };
 

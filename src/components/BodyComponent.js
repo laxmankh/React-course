@@ -13,17 +13,15 @@ const BodyComponent = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING",
+        "https://namastedev.com/api/v1/listRestaurants",
       );
       const data = await response.json();
-      setRestaurants(
-        data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants || [],
-      );
-      setFilteredRestaurants(
-        data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants || [],
-      );
+      const restaurants =
+        data?.data?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants || [];
+      console.log("Fetched Restaurants bodycomponent:", restaurants);
+      setRestaurants(restaurants);
+      setFilteredRestaurants(restaurants);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

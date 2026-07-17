@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./src/components/Contact";
 import About from "./src/components/About";
 import Error from "./src/components/Error";
+import RestaurantMenu from "./src/components/RestaurantMenu";
 
 //in background, react is converting this JSX into React.createElement() function call using babel compiler
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -36,6 +37,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
       },
     ],
   },
