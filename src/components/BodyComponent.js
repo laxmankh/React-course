@@ -1,7 +1,6 @@
 import CardComponent from "./CardComponent";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
-
 const BodyComponent = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -26,6 +25,7 @@ const BodyComponent = () => {
       console.error("Error fetching data:", error);
     }
   };
+
   return restaurants.length === 0 ? (
     <Shimmer />
   ) : (

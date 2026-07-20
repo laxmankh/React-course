@@ -1,32 +1,21 @@
 import { useEffect, useState } from "react";
 import { CDN_URL } from "../utils/constants";
 import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../utils/useRestaturantMenu";
 
 const RestaurantMenu = () => {
-  const [restaurantData, setRestaurantData] = useState(null);
   const { resId } = useParams();
   console.log("Restaurant ID from URL:", resId);
-  const FetchData = async () => {
-    try {
-      const response = await fetch(
-        `https://namastedev.com/api/v1/listRestaurantMenu/${resId}`,
-      );
-      const data = await response.json();
-      console.log("Raw Restaurant Menu Response:", data);
-      const cards = data?.data?.cards || [];
-      const restaurantCard = cards.find((card) => {
-        return card?.card?.card?.info?.name;
-      });
-      const restaurantMenu = restaurantCard?.card?.card?.info || null;
-      console.log("Restaurant Menu Data:", restaurantMenu);
-      setRestaurantData(restaurantMenu);
-    } catch (error) {
-      console.error("Error fetching restaurant menu data:", error);
-    }
-  };
-  useEffect(() => {
-    FetchData();
-  }, [resId]);
+
+  const data = useRestaurantMenu(resId);
+  console.log("Raw Restaurant Menu Response:", data);
+  const cards = data?.data?.cards || [];
+  const restaurantCard = cards.find((card) => {
+    return card?.card?.card?.info?.name;
+  });
+  const restaurantMenu = restaurantCard?.card?.card?.info || null;
+  console.log("Restaurant Menu Data:", restaurantMenu);
+  const restaurantData = restaurantMenu || {};
 
   if (!restaurantData) {
     return <h1>Loading...</h1>;

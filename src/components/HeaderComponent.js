@@ -1,10 +1,12 @@
 import { LOGO_IMG } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const HeaderComponent = () => {
+  const isOnline = useOnlineStatus();
   return (
     <>
-      <div className="header">
+      <div className="header ">
         <div className="header-logo">
           <img className="logo" src={LOGO_IMG} alt="Logo" />
         </div>
@@ -21,6 +23,14 @@ const HeaderComponent = () => {
             </li>
             <li>
               <Link to="/cart">Cart</Link>
+            </li>
+            <li>
+              <Link to="/grossary">Grossary</Link>
+            </li>
+            <li>
+              <span className={isOnline ? "online" : "offline"}>
+                {isOnline ? "🟢" : "🔴"}
+              </span>
             </li>
           </ul>
         </div>
