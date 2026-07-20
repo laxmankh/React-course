@@ -3,18 +3,11 @@ import { CARD_IMG, CDN_URL } from "../utils/constants";
 
 const CardComponent = (props) => {
   const { resData } = props;
-  const {
-    id,
-    cloudinaryImageId,
-    name,
-    avgRating,
-    cuisines,
-    costForTwo,
-    sla,
-  } = resData;
+  const { id, cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } =
+    resData;
   return (
     <Link to={`/restaurants/${id}`} className="card-link">
-      <div className="card">
+      <div className="size-96">
         <img
           className="card-data"
           src={CDN_URL + cloudinaryImageId}

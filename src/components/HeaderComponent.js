@@ -6,25 +6,25 @@ const HeaderComponent = () => {
   const isOnline = useOnlineStatus();
   return (
     <>
-      <div className="header ">
-        <div className="header-logo">
-          <img className="logo" src={LOGO_IMG} alt="Logo" />
+      <div className="flex justify-between items-center p-4 bg-gray-800 text-white ">
+        <div className="size-18">
+          <img className="rounded-full" src={LOGO_IMG} alt="Logo" />
         </div>
-        <div className="header-nav">
-          <ul>
-            <li>
+        <div className="flex items-center">
+          <ul className="flex">
+            <li className="mx-4">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="mx-4">
               <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className="mx-4">
               <Link to="/contact">Contact</Link>
             </li>
-            <li>
+            <li className="mx-4">
               <Link to="/cart">Cart</Link>
             </li>
-            <li>
+            <li className="mx-4">
               <Link to="/grossary">Grossary</Link>
             </li>
             <li>

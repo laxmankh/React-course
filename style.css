@@ -1,4 +1,6 @@
-#heading {
+@import "tailwindcss";
+
+/* #heading {
   color: #2c3e50;
   font-size: 2.5rem;
   font-family: Arial, sans-serif;
@@ -230,4 +232,4 @@
   100% {
     background-position: 0 50%;
   }
-}
+} */
